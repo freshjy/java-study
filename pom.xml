@@ -37,5 +37,6 @@
 		<module>datastructure</module>
 		<module>ex11-20</module>
 		<module>ex11-19</module>
+		<module>ex11-18</module>
 	</modules>
 </project>
