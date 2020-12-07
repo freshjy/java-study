@@ -3,7 +3,6 @@ package circularlinkedlist;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import circularlinkedlist2.List;
 
 
 public class CircularLinkedList <E> implements List<E>{
