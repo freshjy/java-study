@@ -14,5 +14,5 @@ public class Prob01 {
 		}
 		scanner.close();
 	}
-
+ 
 }
