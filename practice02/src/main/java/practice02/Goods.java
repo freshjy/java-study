@@ -13,7 +13,7 @@ public class Goods {
 
 	String getName() {
 		return name;
-	}
+	} 
 
 	int getPrice() {
 		return price;
