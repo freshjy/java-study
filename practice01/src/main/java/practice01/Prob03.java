@@ -14,7 +14,9 @@ public class Prob03 {
 			}else {
 				one = s.charAt(0);
 				two = s.charAt(1);
-				if((one=='3'&&(two=='3'||two=='6'||two=='9'))||(one=='6'&&(two=='3'||two=='6'||two=='9'))||(one=='9'&&(two=='3'||two=='6'||two=='9'))) {
+				if((one=='3'&&(two=='3'||two=='6'||two=='9'))||
+					(one=='6'&&	(two=='3'||two=='6'||two=='9'))||
+					(one=='9'&&	(two=='3'||two=='6'||two=='9'))) {
 					System.out.print(one);
 					System.out.println(two+" 짝짝");
 				}else if(one=='3'||one=='6'||one=='9'||two=='3'||two=='6'||two=='9') {
