@@ -19,4 +19,4 @@ public class MainApp {
 		System.out.println("주어진 배열에서 3의 배수의 개수=>"+threeMulNum);
 		System.out.println("주어진 배열에서 3의 배수의 합=>"+threeMulSum);
 	}
-}
+} 
