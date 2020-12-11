@@ -22,7 +22,7 @@ public class Prob1 {
 			if(oddCheck(inputNumber)) {
 				for(int i=0; i<=inputNumber; i++) {
 					if(oddCheck(i)) {
-						sum+=i;
+						sum+=i; 
 					}
 				}
 				System.out.println(sum);
