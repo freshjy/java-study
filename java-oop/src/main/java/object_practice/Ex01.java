@@ -15,8 +15,6 @@ public class Ex01 {
 		String s4 = "Hello";
 		
 		System.out.println(s3==s4);
-		System.out.println(s3.equals(s4));
-		
-		
+		System.out.println(s3.equals(s4));		
 	}
 }
