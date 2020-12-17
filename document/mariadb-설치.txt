@@ -52,18 +52,59 @@ https://downloads.mariadb.org/mariadb/10.1.38/   -> 마리아디비
 
 5-7. 접속하기
 # /usr/local/javafullstack/mariadb/bin/mysql -p  
- 
+
+6. 서비스 등록
+ /etc/systemd/system/mariadb.service
+
+
+[Unit]
+Description=MariaDB Database Server
+After=syslog.target
+After=network.target
+
+[Service]
+User=mysql
+Group=mysql
+
+KillMode=process
+KillSignal=SIGTERM
+SendSIGKILL=no
+
+LimitNOFILE=infinity
+LimitNPROC=4096
+LimitCORE=infinity
+PermissionsStartOnly=true
+PrivateTmp=true
+OOMScoreAdjust=-1000
+ExecStartPre=sync
+ExecStartPre=sysctl -q -w vm.drop_caches=3
+ExecStart=/usr/local/javafullstack/mariadb/bin/mysqld --defaults-file=/usr/local/javafullstack/mariadb/etc/my.cnf --plugin-dir=/usr/local/javafullstack/mariadb/lib/plugin --pid-file=/usr/local/javafullstack/mariadb/mysqld.pid
+Restart=always
+RestartSec=1
+TimeoutSec=300
+
+[Install]
+WantedBy=multi-user.target
 
 
 
+# systemctl enable mariadb
+# systemctl status mariadb
+# systemctl start mariadb
+# systemctl stop mariadb
+# systemctl start mariadb
 
- 
+# reboot
+
+7. /usr/local/javafullstack/mariadb/bin 디레토리를 PATH 환경변수 설정
+# vi /etc/profile
+PATH 변수에 /usr/local/javafullstack/mariadb/bin 추가
 
 
+8. webdb생성
 
-
-
-
+create database webdb;
+create user 'webdb'@'localhost' identified by 'webdb';
 
 
 
