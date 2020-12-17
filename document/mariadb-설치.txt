@@ -51,7 +51,7 @@ https://downloads.mariadb.org/mariadb/10.1.38/   -> 마리아디비
 # /usr/local/javafullstack/mariadb/bin/mysqladmin -u root password '비밀번호'
 
 5-7. 접속하기
-# /usr/local/javafullstack/mariadb/bin/mysql -p
+# /usr/local/javafullstack/mariadb/bin/mysql -p  
  
 
 
