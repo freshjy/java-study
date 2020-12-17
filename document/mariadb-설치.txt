@@ -1,0 +1,29 @@
+1.라이브러리 설치
+
+gcc-c++
+libtermcap-devel
+gdbm-devel
+zlib*
+libxml*
+freetype*
+libpng*
+libjpeg*
+flex
+cmake.x86_64
+libaio
+
+2.계정생성
+
+# groupadd mysql
+# useradd -M -g mysql mysql
+
+3.소스 다운로드
+https://downloads.mariadb.org/mariadb/10.1.38/   -> 마리아디비
+# wget https://downloads.mariadb.org/interstitial/mariadb-10.1.38/source/mariadb-10.1.38.tar.gz/from/https%3A//archive.mariadb.org/
+# mv  index.html mariadb-10.1.38.tar.gz
+# tar -xvzf mariadb-10.1.38.tar.gz
+
+4.
+# cd mariadb-10.1.38
+# cmake -DCMAKE_INSTALL_PREFIX=/usr/local/javafullstack/mariadb -DMYSQL_USER=mysql -DMYSQL_TCP_PORT=3307 -DMYSQL_DATADIR=/usr/local/javafullstack/mariadb/data -DMYSQL_UNIX_ADDR=/usr/local/javafullstack/mariadb/tmp/mariadb.sock -DINSTALL_SYSCONFDIR=/usr/local/javafullstack/mariadb/etc -DINSTALL_SYSCONF2DIR=/usr/local/javafullstack/mariadb/etc/my.cnf.d -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci -DWITH_EXTRA_CHARSETS=all -DWITH_ARIA_STORAGE_ENGINE=1 -DWITH_XTRADB_STORAGE_ENGINE=1 -DWITH_ARCHIVE_STORAGE_ENGINE=1 -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_PARTITION_STORAGE_ENGINE=1 -DWITH_BLACKHOLE_STORAGE_ENGINE=1 -DWITH_FEDERATEDX_STORAGE_ENGINE=1 -DWITH_PERFSCHEMA_STORAGE_ENGINE=1 -DWITH_READLINE=1 -DWITH_SSL=bundled -DWITH_ZLIB=system
+# make && make install
