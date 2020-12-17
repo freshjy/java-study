@@ -52,7 +52,7 @@ https://downloads.mariadb.org/mariadb/10.1.38/   -> 마리아디비
 
 5-7. 접속하기
 # /usr/local/javafullstack/mariadb/bin/mysql -p
-
+ 
 
 
 
